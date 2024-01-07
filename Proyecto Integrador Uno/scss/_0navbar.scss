@@ -1,0 +1,111 @@
+.navbar {
+    @include row;
+    justify-content: space-between;
+    height: 56px;
+    background-color: white;
+}
+
+.navbar * {
+    background-color:white;
+}
+    
+.navbar {
+    .left {
+        @include row;
+        margin-left: 40px;
+
+        .burger {
+            @include col;
+            padding-left: 12px;
+        }
+        .home {
+            @include row;
+            .logo {
+                @include col;
+                height: 40px;
+                margin-left: 11px;
+                margin-right: 11px;
+            }
+        }
+        
+        .searchbox {
+            @include row;
+            height: 32px;
+            border: solid 1px gray;
+            .search {
+                @include col;
+                outline: none;
+                border: none;
+            }
+            .lensLeft {
+                @include col;
+                height: 32px;
+            }
+        }
+    }
+}
+
+.navbar {
+    .right {
+        @include row;
+        text-align: center;
+        align-items: center;
+        .lensRight {
+            @include col;
+        }
+        .login {
+            @include col;
+            color: rgb(165, 165, 165);
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .login:hover {
+            color: rgb(57, 57, 185);
+        }
+        
+        .createAccount{
+            @include col;
+            justify-content: center;
+            color: #3B49DF;
+            text-decoration: none;
+            border: 10px blue;
+            margin-right: 12px;
+            border: solid 1.2px blue;
+            border-radius: 8px;
+            height: 38px;
+            width: 140px;
+        }
+        .createAccount:hover {
+            color: white;
+            background-color: #3B49DF;
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Responsiveness of the navbar */
+@media screen and (max-width: 7680px) {
+    .navbar .right .lensRight {
+        display: none;
+    }
+    .navbar .left .burger {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar .left .searchbox {
+        display: none;
+    }
+    .navbar .right .login {
+        display: none;
+    }
+    .navbar .left .lensLeft {
+        display: none;
+    }
+    .navbar .right .lensRight {
+        display: flex;
+    }
+    .navbar .left .burger {
+        display: flex;
+    }
+}
