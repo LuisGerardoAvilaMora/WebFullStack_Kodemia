@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 56px;
   background-color: white;
 }
@@ -61,6 +61,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 40px;
 }
 .navbar .left .burger {
   display: flex;
@@ -81,13 +82,24 @@
 .navbar .left .searchbox {
   display: flex;
   flex-direction: column;
+  width: 25rem;
   height: 32px;
+  margin-left: 16px;
+  border: 1px solid rgb(197, 192, 192);
+  border-radius: 5px;
+}
+.navbar .left .searchbox::-moz-placeholder {
+  padding-left: 5px;
+  font-size: large;
+}
+.navbar .left .searchbox::placeholder {
+  padding-left: 5px;
+  font-size: large;
 }
 .navbar .left .lensLeft {
   display: flex;
   flex-direction: column;
   height: 32px;
-  margin-right: 400px;
 }
 
 .navbar .right {

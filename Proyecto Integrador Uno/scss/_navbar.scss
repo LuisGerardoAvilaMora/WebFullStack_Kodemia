@@ -10,7 +10,7 @@
 
 .navbar {
     @include row;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 56px;
     background-color: white;
 }
@@ -22,6 +22,7 @@
 .navbar {
     .left {
         @include row;
+        margin-left: 40px;
 
         .burger {
             @include col;
@@ -38,13 +39,21 @@
         
         .searchbox {
             @include col;
+            width: 25rem;
             height: 32px;
+            margin-left: 16px;
+            border: 1px solid rgb(197, 192, 192);
+            border-radius: 5px;
+        }
+
+        .searchbox::placeholder {
+            padding-left: 5px;
+            font-size: large;
         }
 
         .lensLeft{
             @include col;
             height: 32px;
-            margin-right: 400px;
         }
     }
 }
@@ -54,7 +63,6 @@
         @include row;
         text-align: center;
         align-items: center;
-
         .lensRight {
             @include col;
         }
